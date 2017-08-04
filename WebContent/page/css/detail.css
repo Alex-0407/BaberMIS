@@ -1,0 +1,60 @@
+body {margin:0 auto;
+    width:1100px; 
+}
+.body{text-align:center;margin-top:20px;font-size:16.5px;}
+/*hesder*/
+.logo{margin-left:-200px;margin-bottom:50px;}
+
+.content{float:left;text-align:center;font-size:14px;margin-top:30px;border:1px solid black;width:950px;margin-left:80px;}
+
+/*content*/
+.left{width:600px;float:left;margin-left:20px;margin-top:20px;margin-right:50px;}
+.barber{text-align:left;}
+
+.baberimg img{text-align:left;float:left;width:150px; height:160px;background:#996699;} 
+.babername{width:80px;float:left;margin-left:5px;font-size:18px;font-weight:100;margin-left:30px;margin-bottom:20px;}
+.class{float:right;margin-right:-60px;}
+.star{color:#ee3d1d;float:right;margin-right:95px;}
+.add{width:80px;float:left;margin-left:-78px;margin-top:20px;}
+.classdinfo{float:right;width:135px;margin-right:88px;margin-top:20px;}
+.jobtime{width:80px;float:left;margin-left:-25px;margin-top:20px;}
+.num{color:#ee3d1d;}
+.discribe{width:280px;hight:30px;margin-left:20px;margin-top:33px;float:right;padding:2px;font-size:14px;}
+.discribe1{border:1px dotted #FF44FF;margin-left:10px;margin-top:33px;float:right;padding:2px;font-size:14px;}
+.discribe2{border:1px dotted #FF44FF;margin-left:10px;margin-top:33px;float:right;padding:2px;font-size:14px;}
+.discribe3{border:1px dotted #FF44FF;margin-left:10px;margin-top:33px;float:right;padding:2px;font-size:14px;}
+#focus{border:1px solid #FF44FF;margin-left:15px;margin-top:70px;float:left;font-size:14px;}
+#cancelfocus{border:1px solid #FF44FF;margin-left:76px;margin-top:-21px;float:left;font-size:14px;}
+/*down*/
+.toolbar{background-color:#def5ec;float:left;width:600px;margin-top:20px;height:30px;line-height:30px;}
+.toolbar span{text-align:center;border-right:1px solid #808080;margin-left:60px;padding-right:75px;font-weight:200;font-size:14px;float:left;}
+.toolbar a:hover{color:#ee3d1d;}
+.service{border:none;}
+.service,.works,.appraised {float:left;width:600px;text-decoration:none;background-color:#def5ec;text-align:left;}
+.service-detail{font-size:14px;float:left;line-height:30px;text-align:left;}
+a{text-decoration:none;color:#444141;font-weight:200;}
+.worksimg{float:left;margin-left:-65px;}
+.worksimg li{display:inline;margin-left:25px;float:left;}
+.worksimg img{width:120px;height:160px;float:left;margin-top:10px;}
+#workimg { width:120px; height:160px;}
+#workimg:hover { width:170px; height:220px;margin-top:-50px;margin-left:-20px;}
+
+.appraised{margin-top:20px;}
+.list{float:left;margin-top:10px;width:600px;border-bottom:1px solid #808080;}
+.img img{width:50px;height:50px;float:left;}
+.name,.appraisel,.listtime{float:left;margin-left:10px;}
+/* .txt{float:left;width:500px;margin-left:0px;margin-top:50px;} */
+#evaluateContent{float:left;text-align:left;width:600px;height:20px;margin-left:0px;margin-top:10px;}
+/*right*/
+.right{width:250px;height:400px;float:left;border-left:1px solid #c7c6c6;border-right:1px solid #c7c6c6;padding-left:28px;padding-right:-20px;}
+.title{float:center;text-align:center;font-weight:100;font-size:18px;margin-right:45px;}
+p select{width:192px;text-align:center;height:30px;}
+p select option{text-align:center;height:30px;}
+#hairDesign{width:185px;text-align:center;height:25px;margin-top:10px;}
+.selectdate{width:187px;text-align:center;height:25px;margin-top:10px;}
+.time{width:190px;text-align:center;height:25px;margin-top:10px;}
+.price{color:#ee3d1d;font-size:14px;font-weight:200;}
+.pricetitle{float:left;text-align:center;margin-left:30px;margin-top:35px;margin-bottom:15px;}
+#order{float:center;height:40px;width:150px;background-color:#ee3d1d;color:white;margin-top:50px;}
+.footer img{width:950px;margin-top:10px;}
+.footer{border-top:2px solid #f62d09; float:left;text-align:center;margin-left:80px;margin-top:10px;}

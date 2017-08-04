@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册</title>
+<script type="text/javascript" src="js/alert.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
+
+<link type="text/css" rel="stylesheet" href="css/register.css" />
+
+<script type="text/javascript"
+	src="js/validation/js/jquery.validationEngine.js" charset="utf-8"></script>
+<link href="js/validation/css/validationEngine.jquery.css"
+	type="text/css" rel="stylesheet" />
+<script type="text/javascript"
+	src="js/validation/js/languages/jquery.validationEngine-zh_CN.js"
+	charset="utf-8"></script>
+
+<script type="text/javascript" src="js/register.js"></script>
+<!-- <script type="text/javascript" src="js/myvalidation.js"></script> -->
+
+<script type="text/javascript">
+	var baseUrl = "http://localhost:8080/BaberMIS/";
+	$(document).ready(function() {
+		// binds form submission and fields to the validation engine
+		$("#regform").validationEngine({
+			ajaxFormValidation : true
+		//onAjaxFormComplete: ajaxValidationCallback,
+		//onBeforeAjaxFormValidation: beforeCall
+		/* success : true,
+		failure : function() {
+			document.getElementById('register').enabled = true;
+		} */
+		});
+
+		register();
+	})
+</script>
+
+</head>
+<body onLoad="javascript:document.getElementById('name').focus()">
+	<div class="body" style="width: 1100px;">
+		<div class="header">
+			<div class="logo">
+				<div class="logoimg">
+					<span><a style="cursor: pointer" href="Home.html"> <img
+							src="images/logo6.png" /></a></span>
+					<div style="margin-top: -50px; margin-left: 300px; color: #808080;">
+						<span>约理发师·我要有型</span>
+					</div>
+				</div>
+			</div>
+			<div class="txt">
+				<span>注册成为约理用户</span>
+			</div>
+		</div>
+		<form id="regform" class="formular" method="post">
+			<fieldset>
+				<legend> 注册 </legend>
+				<div id="regdiv" class="main">
+					<div id="namediv" class="namediv">
+						<label> <span>用户名: </span> <input id="name" value=""
+							class="validate[required,minSize[2],maxSize[8]]" type="text"
+							placeholder="请输入昵称"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'" />
+						</label> <span class="login">已有帐号<span><a href="Login.html">直接登录</a></span></span>
+					</div>
+
+					<div id="teldiv" class="tel">
+						<label> <span>手机号: </span> <input id="tel" name="tel" type="tel"
+							value="" class="validate[required,custom[tel]]" data-errormessage-value-missing="手机号不能为空！" 
+							placeholder="请输入手机号"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'" />
+						</label>
+					</div>
+
+					<div id="passdiv" class="pass">
+						<label> <span>设置密码: </span> <input id="pwd" name="pwd"
+							value="" class="validate[required,minSize[6],maxSize[8]]"
+							type="password" placeholder="请输入6-8位密码"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'" />
+						</label>
+					</div>
+
+					<div id="repassdiv" class="repass">
+						<label> <span>确认密码: </span> <input id="repwd" name="repwd"
+							value=""
+							class="validate[required,minSize[6],maxSize[8],equals[pwd]]"
+							type="password" placeholder="请重新输入密码"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'" />
+						</label>
+						<!-- onblur="isenable()" -->
+					</div>
+
+					<input id="register" type="submit" style="cursor: pointer"
+						value="立即注册" /> <br />
+				</div>
+
+			</fieldset>
+
+		</form>
+
+		<div class="footer">
+			<img src="images/footer2.png" />
+		</div>
+	</div>
+</body>
+
+</html>

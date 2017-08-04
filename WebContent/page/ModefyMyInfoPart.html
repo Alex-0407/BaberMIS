@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>修改个人资料</title>
+<script type="text/javascript" src="js/alert.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
+
+<link href="js/jqueryui/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jqueryui/ui/jquery-ui.js"></script>
+<link href="js/jqueryui/themes/redmond/theme.css" rel="stylesheet" type="text/css"/>
+<link href="js/jqueryui/demos/demos.css" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript" src="js/datepickcn.js"></script>
+
+<link type="text/css" rel="stylesheet" href="css/modefymyinfopart.css" />
+
+<script type="text/javascript"
+	src="js/validation/js/jquery.validationEngine.js" charset="utf-8"></script>
+<link href="js/validation/css/validationEngine.jquery.css"
+	type="text/css" rel="stylesheet" />
+<script type="text/javascript"
+	src="js/validation/js/languages/jquery.validationEngine-zh_CN.js"
+	charset="utf-8"></script>
+
+<script type="text/javascript" src="js/myinfo.js"></script>
+
+<script>
+	$(function() {
+		$("#birthday").datepicker();
+	});
+    
+</script>
+
+<script type="text/javascript">
+	var baseUrl = "http://localhost:8080/BaberMIS/";
+	$(document).ready(function() {
+		// binds form submission and fields to the validation engine
+		$("#modefymyinfoform").validationEngine({
+			ajaxFormValidation : true
+		//onAjaxFormComplete: ajaxValidationCallback,
+		//onBeforeAjaxFormValidation: beforeCall
+		/* success : true,
+		failure : function() {
+			document.getElementById('register').enabled = true;
+		} */
+		});
+		LoadUserInfo();
+		modefyMyInfo();
+	})
+</script>
+
+</head>
+<body onLoad="javascript:document.getElementById('name').focus()">
+	<div class="body" style="width: 750px;">
+		
+		<form id="modefymyinfoform" class="formular" method="post" style="font-size:14px;">
+			<fieldset>
+				<legend>修改个人资料</legend>
+				<div id="regdiv" class="main">
+					<div id="userNamediv" class="userName">
+						<label> <span>昵称: </span> <input id="userName" value=""
+							class="validate[required,minSize[2],maxSize[8]]]" type="text"
+							placeholder="请输入昵称"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'"
+							 />
+						</label>
+					</div>
+
+					<div id="realNamediv" class="realName">
+						<label> <span>真实姓名: </span> <input id="realName" value=""
+							class="validate[required,minSize[2],maxSize[8]]" type="text" placeholder="请输入真实姓名"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'"
+							 />
+						</label>
+					</div>
+					
+						<div id="genderdiv" class="gender">
+						<label> <span>性别: </span> 
+						    <!-- <input id="gender" value=""
+							   class="validate[required]" type="text" placeholder="请输入性别"
+							   onMouseOver="this.style.backgroundColor='#ffffff'"
+							   onMouseOut="this.style.backgroundColor='#e8f4ff'"
+							 /> -->
+							 <select id="gender">
+                               <option value="男">男</option>
+                               <option value="女">女</option>
+                             </select>
+						</label> 
+						
+						<!-- <label><span>性别: </span>
+						<input id="gender" name="gender" type="radio" checked="checked" value="" />男  
+                        <input id="gender" name="gender" type="radio" value="" />女</label>  -->
+					</div>
+					
+					<div id="birthdaydiv" class="birthday">
+						<label> <span>生日: </span> <input id="birthday" name="birthday"
+							value="" class="validate[required]" 
+							type="text" placeholder="点击选择生日"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'"
+							readonly/>
+						</label>
+					</div>
+
+					<div id="teldiv" class="tel">
+						<label> <span>电话: </span> <input id="tel" name="tel"
+							value=""
+							class="validate[required,custom[tel]]" data-errormessage-value-missing="手机号不能为空！" 
+							type="tel" placeholder="请输入手机号" 
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'"
+							/>
+						</label>
+						<!-- onblur="isenable()" -->
+					</div>
+					
+					<div id="addrdiv" class="addr">
+						<label> <span>地址: </span> <input id="addr" name="addr"
+							value=""
+							class="validate[required]"
+							type="text" placeholder="请输入联系地址"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'"
+							/>
+						</label>
+						<!-- onblur="isenable()" -->
+					</div>
+
+					<input id="modefymyinfo" type="submit"
+						style="cursor: pointer" value="确认" /> <!-- <span class="cancel" onclick="cancel();">
+                    <button id="cancel" style="cursor:pointer">取消</button></span> -->  <br />
+				</div>
+
+			</fieldset>
+
+		</form>
+
+	</div>
+</body>
+
+</html>

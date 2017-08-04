@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
+<link href="css/myinfopart.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/alert.js"></script>
+<script type="text/javascript" src="js/myinfo.js"></script>
+<script type="text/javascript" src="js/modefy.js"></script>
+
+<script type="text/javascript">
+	var baseUrl = "http://localhost:8080/BaberMIS/";
+
+	function showConent(url) {
+		var p = document.getElementById("right_content");
+		p.src = url;
+	}
+	
+	GetUserInfo();
+</script>
+<title>个人中心</title>
+</head>
+<body>
+	<div class="body">
+
+		<div class="content">
+			
+				<table>
+					<tr>
+						<td>
+							<div class="manintro">
+							<span id="img">
+							<img src="images/Male.jpg" /></span>
+								<div class="mantxt">
+									<table>
+										<tr>
+											<td class="title">昵称：</td>
+											<td id="userName" class="intro">主人很懒，还未设置。</td>
+										</tr>
+										
+										<tr>
+											<td class="title">真实姓名：</td>
+											<td id="realName" class="intro">主人很懒，还未设置。</td>
+										</tr>
+										
+										<tr>
+											<td class="title" style="height: 20px">性别：</td>
+											<td id="gender" class="intro">主人很懒，还未设置。</td>
+										</tr>
+										
+										<tr>
+											<td class="title">生日：</td>
+											<td id="birthday" class="intro">主人很懒，还未设置。</td>
+										</tr>
+										
+										<tr>
+											<td class="title">电话：</td>
+											<td id="tel" class="intro">主人很懒，还未设置。</td>
+										</tr>
+										
+										<tr>
+											<td class="title">联系地址：</td>
+											<td id="addr" class="intro">主人很懒，还未设置。</td>
+										</tr>
+										
+										<tr>
+											<td class="title">账户余额：</td>
+											<td id="num" class="intro">您还未充值哦！。</td>
+										</tr>
+										
+									</table>
+								</div>
+								<div style="clear: both"></div>
+							</div>
+						</td>
+
+					</tr>
+
+				</table>
+		</div>
+	</div>
+</body>
+</html>

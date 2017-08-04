@@ -1,0 +1,142 @@
+body {margin:0 auto;
+    width:800px; 
+   
+}
+.body{text-align:center;margin-top:20px;}
+/*hesder*/
+
+.content{float:left;text-align:left;width:800px;margin-top:50px;}
+
+/*content¿ªÊ¼*/
+.content{border:1px solid black;width:800px;margin-left:-123px;}
+
+.list img {
+	width: 70px;
+	height: 80px;
+	margin: 10px;
+	margin-top:15px;
+}
+
+.list {
+	border: 1px solid #808080;
+	width: 750px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	float: left;
+}
+
+.title {
+	border-bottom: 1px solid #808080;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-right: 20px;
+	padding-bottom: 5px;
+}
+
+.key {
+	line-height: 25px;
+	color:#ea66a6;
+	font-size: 14px;
+}
+
+.value{
+	line-height: 25px;
+	color: #8552a1;
+	font-size: 14px;
+}
+
+.left, .center {
+	float: left;
+}
+
+.right {
+	float: right;
+	width: 300px;
+}
+
+.center {
+	font-size: 14px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.name {
+	color: #1f1f1f;
+}
+
+.center .name {
+	line-height: 20px;
+	color: #840228;
+	font-size: 18px;
+}
+
+.state {
+	float: left;
+	color: #808080;
+	font-size: 14px;
+}
+
+.oprae {
+	float: left;
+}
+
+.price {
+	color: #fa5f1a;
+	font-size: 14px;
+	margin-left: 100px;
+	margin-top: 10px;
+}
+
+#price {
+	color: #ea66a6;
+	font-size: 14px;
+	margin-left: -100px;
+	margin-top: 5px;
+}
+
+#state {
+	color: #ea66a6;
+	font-size: 14px;
+	margin-left: 0px;
+	margin-top: 5px;
+}
+
+.orderPrice
+{
+	color: #ed1941;
+	font-size: 14px;
+	margin-left: 0px;
+	margin-top: 10px;
+}
+
+.orderStatus
+{
+	color: #ed1941;
+	font-size: 14px;
+	margin-left: 0px;
+	margin-top: 20px;
+}
+
+.pay
+{
+	width: 100px;
+	height: 30px;
+	line-height: 20px;
+	background-color: #fa5f1a;
+	color: white;
+	margin-left: 0px;
+	margin-top: -5px;
+}
+
+.cancel
+{
+	width: 100px;
+	height: 30px;
+	line-height: 20px;
+	background-color: #fa5f1a;
+	color: white;
+	margin-left: 10px;
+	margin-top: -5px;
+} 

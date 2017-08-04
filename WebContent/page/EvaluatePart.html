@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>评价</title>
+<link href="css/evaluatepart.css" type="text/css" rel="stylesheet" />
+<link href="css/step.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/step.js"></script>
+<script type="text/javascript" src="js/alert.js"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<link href="css/star-rating.css" media="all" rel="stylesheet"
+	type="text/css" />
+<script src="js/star-rating.js" type="text/javascript"></script>
+
+<script type="text/javascript"
+	src="js/validation/js/jquery.validationEngine.js" charset="utf-8"></script>
+<link href="js/validation/css/validationEngine.jquery.css"
+	type="text/css" rel="stylesheet" />
+<script type="text/javascript"
+	src="js/validation/js/languages/jquery.validationEngine-zh_CN.js"
+	charset="utf-8"></script>
+
+<script type="text/javascript" src="js/getvalue.js"></script>
+<script type="text/javascript" src="js/evaluate.js"></script>
+
+<script>
+    var baseUrl = "http://localhost:8080/BaberMIS/";
+
+	$(function() {
+		setTimeout("changeDivStyle(4);", 100); // 0.1秒后展示结果，因为HTML加载顺序，先加载脚本+样式，再加载body内容。所以加个延时
+	});
+
+	jQuery(document).ready(function() {
+		$(".rating-kv").rating();
+	});
+
+	$(document).ready(function() {
+		// binds form submission and fields to the validation engine
+		$("#evaluateform").validationEngine({
+			ajaxFormValidation : true
+		//onAjaxFormComplete: ajaxValidationCallback,
+		//onBeforeAjaxFormValidation: beforeCall
+
+		});
+		evaluate();
+	});
+	
+</script>
+<body>
+	<div class="body">
+
+		<div id="step" class="stepInfo">
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+			<div class="stepIco stepIco1" id="create">
+				1
+				<div class="stepText" id="createText">预约中</div>
+			</div>
+			<div class="stepIco stepIco2" id="check">
+				2
+				<div class="stepText" id="checkText">待支付</div>
+			</div>
+			<div class="stepIco stepIco3" id="produce">
+				3
+				<div class="stepText" id="produceText">待评价</div>
+			</div>
+			<div class="stepIco stepIco4" id="delivery">
+				4
+				<div class="stepText" id="deliveryText">评价中</div>
+			</div>
+			<div class="stepIco stepIco5" id="received">
+				5
+				<div class="stepText" id="receivedText">订单完成</div>
+			</div>
+		</div>
+		<form id="evaluateform" class="formular" method="post">
+			<fieldset>
+
+				<div id="evaluatediv" class="main">
+					<div id="prodiv">
+						<span id="pro">专业：</span><span id="proinput"><input
+							id="professional" type="number" value="5" class="rating" min="0" max="5"
+							step="0.5" data-stars=5 data-symbol="&#xe005;"
+							data-default-caption="{rating} hearts" data-star-captions="{}">
+						</span> <br>
+					</div>
+					<div id="attdiv">
+						<span id="att">态度：</span><span id="attinput"><input
+							id="attitude" type="number" value="5" class="rating" min="0" max="5"
+							step="0.5" data-stars=5 data-symbol="&#xe005;"
+							data-default-caption="{rating} hearts" data-star-captions="{}">
+						</span> <br>
+					</div>
+					<div id="ontdiv">
+						<span id="ont">守时：</span><span id="ontinput"><input
+							id="ontime" type="number" value="5" class="rating" min="0" max="5"
+							step="0.5" data-stars=5 data-symbol="&#xe005;"
+							data-default-caption="{rating} hearts" data-star-captions="{}">
+						</span> <br>
+					</div>
+					<div id="contentdiv">
+						<label> <span class="title">评价内容：</span> 						
+							 <span class="content">
+							<textarea id="content"
+							name="content" name="a" class="validate[required,minSize[5],maxSize[50]]]"
+							placeholder="请输入评价内容"  style="width:325px;height:80px;"></textarea>
+							</span>
+						</label>
+					</div>
+					<div id="buttondiv"> <input id="evaluate" class="validate[required]"
+						type="submit" style="cursor: pointer" value="确认评价" /> 
+						<input id="cancel" class="validate[required]"
+						type="submit" onclick="cancelEvaluate()" style="cursor: pointer" value="取消" />
+						<br />
+				</div>
+				</div>
+
+			</fieldset>
+		</form>
+
+		<div id="orderlist"></div>
+		<div id="orderpayedlist"></div>
+	</div>
+</body>
+</html>

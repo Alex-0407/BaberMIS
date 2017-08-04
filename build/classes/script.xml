@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	
+	<plagin id="base">
+		<styleList>
+			<link rel="stylesheet" href="css/reset.css"/>
+		</styleList>
+		
+		<scriptList>
+			<script type="text/javascript" src="js/jquery-1.10.2.js"> </script>
+		</scriptList>
+		
+	</plagin>
+	
+	<plagin id="jquery">
+		<scriptList>
+			<script type="text/javascript" src="js/jquery-1.10.2.js"> </script>
+		</scriptList>
+	</plagin>
+	
+	
+	<plagin id="childPage">
+		<styleList>
+			<link rel="stylesheet" href="css/childPage.css"/>
+		</styleList>
+	</plagin>
+	
+	<plagin id="easyui">
+		<styleList>
+			<link rel="stylesheet" href="js/easyui/themes/default/easyui.css"/>
+			<link rel="stylesheet" href="css/form2.css"/>
+		</styleList>
+		<scriptList>
+			<script type="text/javascript" src="js/easyui/jquery.easyui.min.js"> </script>
+			<script type="text/javascript" src="js/easyui/easyloader.js"> </script>
+			<script type="text/javascript" src="js/easyui/locale/easyui-lang-zh_CN.js"> </script>
+		</scriptList>
+	</plagin>
+	
+	<plagin id="easyui1">
+		<styleList>
+			<link rel="stylesheet" href="js/easyui/themes/bootstrap/easyui.css"/>
+		</styleList>
+		<scriptList>
+			<script type="text/javascript" src="js/easyui/jquery.easyui.min.js"> </script>
+			<script type="text/javascript" src="js/easyui/easyloader.js"> </script>
+			<script type="text/javascript" src="js/easyui/locale/easyui-lang-zh_CN.js"> </script>
+		</scriptList>
+	</plagin>
+	
+	<plagin id="artDialog">
+		<styleList>
+			<link rel="stylesheet" href="js/artDialog/skins/blue.css"/>
+		</styleList>
+		<scriptList>
+			<script type="text/javascript" src="js/artDialog/artDialog.source.js"> </script>
+			<script type="text/javascript" src="js/artDialog/plugins/iframeTools.source.js"> </script>
+			<script type="text/javascript" src="js/commons.js"> </script>
+		</scriptList>
+	</plagin>
+	
+	<plagin id="ztree">
+		<styleList>
+			<link rel="stylesheet" href="js/ztree/css/zTreeStyle/zTreeStyle.css"/>
+		</styleList>
+		<scriptList>
+			<script type="text/javascript" src="js/ztree/jquery.ztree.all-3.5.js"> </script>
+		</scriptList>
+	</plagin>
+	
+	<plagin id="jqueryui">
+		<styleList>
+			<link rel="stylesheet" href="js/jqueryui/redmond/jquery-ui-1.10.4.custom.min.css"/>
+			<link rel="stylesheet" href="js/jqueryui/timepicker-addon.css"/>
+		</styleList>
+		<scriptList>
+			<script type="text/javascript" src="js/jqueryui/jquery-ui-1.10.4.custom.min.js"> </script>
+			<script type="text/javascript" src="js/jqueryui/jquery-ui-timepicker-addon.js"> </script>
+			<script type="text/javascript" src="js/jqueryui/jquery.ui.datepicker-zh-CN.js"> </script>
+		</scriptList>
+	</plagin>
+	
+	<plagin id="kindeditor">
+		<styleList>
+			<link rel="stylesheet" href="kindeditor-4.1.10/themes/default/default.css"/>
+		</styleList>
+		<scriptList>
+			<script type="text/javascript" src="kindeditor-4.1.10/kindeditor.js"> </script>
+		</scriptList>
+	</plagin>
+	
+	<!-- 由于系统里面的表单的样式，依赖于bootstrap -->
+	<plagin id="bootstrap">
+		<styleList>
+			<link rel="stylesheet" href="js/bootstrap/css/bootstrap.css"/>
+		</styleList>
+		<scriptList>
+			<script type="text/javascript" src="js/bootstrap/js/bootstrap.js"> </script>
+			<script type="text/javascript" src="js/bootstrap/js/jquery.validate.js"> </script>
+			<script type="text/javascript" src="js/bootstrap/js/messages_zh.js"> </script>
+			<script type="text/javascript" src="js/bootstrap/js/my.validate.js"> </script>
+		</scriptList>
+	</plagin>
+	
+	<!-- 响应式 -->
+	<plagin id="responsive">
+		<styleList>
+			<link rel="stylesheet" href="js/bootstrap/css/bootstrap-responsive.css"/>
+		</styleList>
+	</plagin>
+	
+</root>

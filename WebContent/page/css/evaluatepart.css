@@ -1,0 +1,34 @@
+body {margin:0 auto;
+    width:750px; 
+   
+}
+.body{text-align:center;margin-top:20px;}
+.logo{border-bottom:4px solid #fc6106;width:750px;height:114px;padding-bottom:10px;margin-left:25px;}
+logoimg img{float:left;vertical-align:top;}
+.txt{font-size:25px;margin-top:30px;padding-bottom:20px;font-weight:700;}
+input{color:#9b9393;}
+a:hover{color:#fa0d0d;}
+a:active{color:#471668;}
+a{color:#fc6106;font-weight:600;text-decoration:underline;}
+
+#step{margin-left:80px;}
+#evaluatediv{margin-left:-680px;margin-top:25px;}
+#prodiv{float:left;margin-left:100px;margin-top:5px;}
+#attdiv{float:left;margin-left:100px;margin-top:5px;}
+#ontdiv{float:left;margin-left:100px;margin-top:5px;}
+#pro{float:left;margin-left:150px;margin-top:30px;}
+#att{float:left;margin-left:150px;margin-top:30px;}
+#ont{float:left;margin-left:150px;margin-top:30px;}
+#proinput{float:left;margin-left:0px;margin-top:10px;}
+#attinput{float:left;margin-left:0px;margin-top:10px;}
+#ontinput{float:left;margin-left:0px;margin-top:10px;} 
+
+#contentdiv{float:left;margin-left:250px;margin-top:10px;}
+.title{float:left;margin-left:0px;margin-top:10px;font-size:15px;font-weight:300;}
+.content{float:left;margin-left:0px;margin-top:10px;font-size:14px;font-weight:300;}
+
+#evaluateform {width:750px;margin-left:25px;margin-top:30px;}
+
+#buttondiv{float:left;margin-left:360px;margin-top:5px;}
+#evaluate {float:left;margin-left:0px;margin-top:20px;height:35px;width:100px;background-color:#ee3d1d;color:white;}
+#cancel {float:left;margin-left:20px;margin-top:20px;height:35px;width:100px;background-color:#ee3d1d;color:white;}

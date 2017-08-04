@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
+<link href="css/myinfo.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/alert.js"></script>
+<script type="text/javascript" src="js/myinfo.js"></script>
+<script type="text/javascript" src="js/modefy.js"></script>
+
+<script type="text/javascript">
+	var baseUrl = "http://localhost:8080/BaberMIS/";
+
+	function showConent(url) {
+		var p = document.getElementById("right_content");
+		p.src = url;
+	}
+
+</script>
+<title>个人中心</title>
+</head>
+<body>
+	<div class="body">
+
+		<div class="header">
+			<div class="logo">
+				<div class="logoimg">
+					<span><a style="cursor:pointer"  href="Home.html"> <img src="images/logo6.png" /></a></span>
+					<div style="margin-top: -50px; margin-left: 300px; color: #808080;">
+						<span>约理发师·我要有型</span>
+					</div>
+				</div>
+			</div>
+			<div class="txt">
+				<span>个人中心</span>
+			</div>
+		</div>
+
+
+		<div class="content">
+			<div id="left_part">
+				<div class="box">
+					<ul class="menu">
+						<li class="level1"><a href="#none" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow">我的资料</a>
+							<ul class="level2">
+							<li><a href="javascript:void(0);" onmousedown="showConent('MyInfoPart.html')" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow">个人信息</a></li>
+								<li><a href="javascript:void(0);" onmousedown="showConent('ModefyMyInfoPart.html')" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow">修改个人信息</a></li>
+								 <li><a href="javascript:void(0);" onmousedown="showConent('ChargePart.html')" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow">充值</a></li>
+								
+							</ul></li>
+						<li class="level1"><a href="#none" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow">订单管理</a>
+							<ul class="level2">
+								<li><a href="javascript:void(0);" onmousedown="showConent('MybaberPart.html')" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow">我的预约</a></li>
+									
+								<li><a href="javascript:void(0);" onmousedown="showConent('MybaberOrderPart.html')" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow">我的订单</a></li>
+								<li><a id="a_evaluate" href="javascript:void(0);" onmousedown="showConent('MybaberNeedEvaluatePart.html')" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow">待评价订单</a></li>
+								<li><a href="javascript:void(0);" onmousedown="showConent('MybaberFinishedPart.html')" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow"
+									rel="external nofollow" rel="external nofollow">历史订单</a></li>
+							</ul></li>
+						<li class="level1"><a style="cursor: pointer" onclick="cancel();" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow"
+							rel="external nofollow" rel="external nofollow">退出账号</a>
+							</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="right_part">
+			<iframe src="MybaberPart.html" scrolling="auto" id="right_content" style="width:843px;height:800px;float:inherit;margin-left:0px;">
+				
+			</iframe>  
+			</div>
+		</div>
+
+		<div class="footer">
+			<div>
+				<img src="images/footer2.png" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>

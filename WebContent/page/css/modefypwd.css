@@ -1,0 +1,25 @@
+body {margin:0 auto;
+    width:1100px; 
+   
+}
+.body{text-align:center;margin-top:20px;}
+.logo{border-bottom:4px solid #fc6106;width:1000px;height:100px;padding-bottom:10px;margin-left:25px;}
+logoimg img{float:left;vertical-align:top;}
+.txt{font-size:25px;margin-top:30px;font-weight:100;}
+
+input{color:#9b9393;}
+a{color:#fc6106;text-decoration:underline;}
+a:hover{color:#fa0d0d;}
+a:active{color:#471668;}
+
+#modefypwdform {width:1000px;margin-left:25px;font-size:14px;}
+#pwddiv {margin-left:20px;padding-top:40px;}
+#newpwddiv {margin-left:-12px;padding-top:35px;}
+#renewpwddiv {margin-left:-12px;padding-top:35px;padding-bottom:40px;}
+
+#modefypwd {margin-left:20px;height:50px;width:120px;background-color:#ee3d1d;color:white;margin-top:20px;}
+.cancel button{margin-left:20px;height:50px;width:120px;background-color:#ee3d1d;color:white;margin-top:10px;}
+
+/*fooger*/
+.footer img{width:1000px;margin-top:10px;}
+.footer{border-top:2px solid #f62d09; float:left;text-align:center;margin-left:25px;margin-top:10px;}

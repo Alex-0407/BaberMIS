@@ -1,0 +1,15 @@
+人事局用户
+http://localhost:8080/recruitSimple/Admin/login
+帐号：wangsen 密码：123      参考表：operator
+
+用人单位
+http://localhost:8080/recruitSimple/EmployerSys/login
+帐号：qihoo 密码：123        参考表：employer
+
+审核人员
+http://localhost:8080/recruitSimple/AuditorSys/login
+帐号：500235   密码：123     参考表：auditor
+
+考生
+http://localhost:8080/recruitSimple/candidate/Candidate/login
+帐号：50023519890105423X     密码：qwe333333   参考表：candidate

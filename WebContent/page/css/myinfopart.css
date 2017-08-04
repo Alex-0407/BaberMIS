@@ -1,0 +1,15 @@
+body {margin:0 auto;
+    width:750px; 
+   
+}
+.body{text-align:center;margin-top:0px;}
+
+
+/*content¿ªÊ¼*/
+.content{border:1px solid black;width:750px;height:500px;margin-left:0px;}
+.content{border:1px solid black;width:750px;margin-left:0px;}
+.manintro img{float:left;margin-left:30px;height:150px;width:120px;margin-top:20px;margin-bottom:20px;}
+.mantxt{float:left;margin-top:0px;margin-left:20px;}
+
+td.title{font-size:14px;color:#494646;font-weight:500;float:left;margin-left:10px;margin-top:15px;}
+td.intro{font-size:14px;float:left;margin-left:5px;margin-top:7px;}

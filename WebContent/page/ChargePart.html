@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>充值</title>
+    <script type="text/javascript" src="js/cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link href="css/chargepart.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/alert.js"></script>
+    <script type="text/javascript" src="js/chargepart.js"></script>
+    
+    <script type="text/javascript"
+	src="js/validation/js/jquery.validationEngine.js" charset="utf-8"></script>
+    <link href="js/validation/css/validationEngine.jquery.css"
+	type="text/css" rel="stylesheet" />
+    <script type="text/javascript"
+	src="js/validation/js/languages/jquery.validationEngine-zh_CN.js"
+	charset="utf-8"></script>
+    
+<script type="text/javascript">
+var baseUrl = "http://localhost:8080/BaberMIS/";
+$(document).ready(function() {
+	// binds form submission and fields to the validation engine
+	$("#chargeform").validationEngine({
+		ajaxFormValidation : true
+	//onAjaxFormComplete: ajaxValidationCallback,
+	//onBeforeAjaxFormValidation: beforeCall
+	/* success : true,
+	failure : function() {
+		document.getElementById('register').enabled = true;
+	} */
+	});
+	
+	charge();
+});
+</script>
+
+</head>
+<body onLoad="javascript:document.getElementById('pwd').focus()">
+    <div class="body">
+        
+      <form id="chargeform" class="formular" method="post">
+			<fieldset>
+				<legend>充值 </legend>
+				<div id="chargediv" class="main">
+					<div id="namediv" class="namediv">
+						<label> <span>充值账户: </span> <input id="name" value=""
+							class="validate[required]" type="text"
+							placeholder="充值账户为真实姓名"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'"
+							 />
+						</label>
+					</div>
+
+					<div id="numdiv" class="numdiv">
+						<label> <span>充值金额: </span> <input id="num" name="num"
+							value="" class="validate[required,[max[9999]]"
+							type="number" placeholder="请输入充值金额"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'"
+							/>
+						</label>
+					</div>
+
+					<div id="pwddiv" class="pwddiv">
+						<label> <span>支付密码: </span> <input id="pwd" name="pwd"
+							value=""
+							class="validate[required,minSize[6],maxSize[8]]"
+							type="password" placeholder="请输入6-8位支付密码"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'"
+							/>
+						</label>
+						<!-- onblur="isenable()" -->
+					</div>
+
+					<input id="charge" type="submit"
+						style="cursor: pointer" value="确认充值" />
+						<span class="cancel" onclick="cancelCharge();">
+                    <button id="cancelcharge" style="cursor:pointer">取消</button></span><br />
+				</div>
+
+			</fieldset>
+
+		</form>
+      
+    </div>
+
+</body>
+</html>

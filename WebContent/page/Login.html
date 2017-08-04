@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="<%=basePath%>">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>登录</title>
+<link href="css/login.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/alert.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript"
+	src="js/validation/js/jquery.validationEngine.js" charset="utf-8"></script>
+<link href="js/validation/css/validationEngine.jquery.css"
+	type="text/css" rel="stylesheet" />
+<script type="text/javascript"
+	src="js/validation/js/languages/jquery.validationEngine-zh_CN.js"
+	charset="utf-8"></script>
+<script type="text/javascript" src="js/login.js"></script>
+
+
+<script type="text/javascript">
+	var baseUrl = "http://localhost:8080/BaberMIS/";
+
+	$(document).ready(function() {
+		// binds form submission and fields to the validation engine
+		$("#loginform").validationEngine({
+			ajaxFormValidation : true
+		//onAjaxFormComplete: ajaxValidationCallback,
+		//onBeforeAjaxFormValidation: beforeCall
+
+		});
+
+		login();
+	});
+	
+</script>
+
+
+<!-- <script type="text/javascript">
+window.onload=function(){
+	document.getElementById('userName').value=null"
+	document.getElementById('pwd').value=null;
+}
+</script> -->
+
+</head>
+<body onLoad="javascript:document.getElementById('userName').focus()">
+	<div class="body">
+
+		<div class="header">
+			<div class="logo">
+				<div class="logoimg">
+					<span> <a style="cursor:pointer"  href="Home.html"> <img src="images/logo6.png" /></a></span>
+					<div style="margin-top: -50px; margin-left: 300px; color: #808080;">
+						<span>约理发师·我要有型</span>
+					</div>
+				</div>
+			</div>
+			<div class="txt">
+				<span>登录到约理</span>
+			</div>
+		</div>
+
+		<form id="loginform" class="formular" autocomplete="off" method="post">
+			<fieldset>
+				<legend> 登录 </legend>
+				<div id="logindiv" class="main">
+					<div id="name" class="name">
+						<label> <span>用户名: </span> <input id="userName" name="userName" autocomplete="off" type="text" value=""
+							class="validate[required,minSize[2],maxSize[8]]]" type="text" 
+							placeholder="请输入用户名" />
+							</label>
+							<span
+					class="register">还不是约理会员<a href="Register.html"><span>立即注册</span></a></span>
+						
+					</div>
+
+					<div id="pass" class="pass">
+						<label> <span>密码: </span> <input id="pwd" name="pwd"
+							value="" class="validate[required,minSize[6],maxSize[8]]]" type="password"  placeholder="请输入密码"/>
+						</label>
+					</div>
+				</div>
+				
+					<input id="login" class="validate[required]" type="submit"
+				style="cursor: pointer" value="登录" /> <br />
+			</fieldset>
+		</form>
+
+		<div class="footer">
+			<img src="images/footer2.png" />
+		</div>
+
+	</div>
+</body>
+</html>

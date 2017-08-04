@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/male.js">
+	
+</script>
+<script type="text/javascript" src="js/jquery.js">
+	
+</script>
+<script type="text/javascript" src="js/cookie.js"></script>
+<link href="css/man.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/alert.js"></script>
+<script type="text/javascript" src="js/loadcss.js"></script>
+<script type="text/javascript" src="js/modefy.js"></script>
+
+<script type="text/javascript">
+	var baseUrl = "http://localhost:8080/BaberMIS/";
+	$(function() {
+		modefy();
+	})
+	loadServiceInfo();
+	GetBaberInfo_Male();
+</script>
+<title>主页</title>
+</head>
+<body>
+	<div class="body">
+		<div class="header">
+			<div class="logo">
+				<div class="logoimg">
+					<span> <a style="cursor:pointer"  href="Home.html"> <img src="images/logo6.png" /></a></span>
+					<div style="margin-top: -50px; margin-left: 300px; color: #808080;">
+						<span>约理发师·我要有型</span>
+					</div>
+				</div>
+			</div>
+			<div class="navigation">
+			<ul id="navigation">
+				<li> <a style="cursor:pointer"  href="Home.html"> <img src="images/Home.png"/> </a>
+				</li>
+				<li><a style="cursor:pointer" href="Male.html">型男</a>
+				</li>
+				<li><a style="cursor:pointer" href="Female.html">靓女</a>
+				</li>
+				<li id="li_login" onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a style="cursor:pointer" href="Login.html">登录</a>
+				 </li>
+					<li id="li_reg"><a style="cursor:pointer" href="Register.html">注册</a>
+					</li>
+			</ul>
+			</div>
+		</div>
+		<div class="content">
+			<table>
+				<tr>
+					<td>
+						<div class="manintro">
+						    <div id="img">
+							<img src="images/Manimg.jpg" />
+							</div>
+							<div class="mantxt">
+								<table>
+									<tr>
+										<td class="title">型男理发</td>
+									</tr>
+									<tr id="nameIntro">
+										<td class="intro" style="width: 250px">内容介绍</td>
+									</tr>
+									<tr>
+										<td class="title">理发时间</td>
+									</tr>
+									<tr>
+										<td id="timeIntro" class="intro">内容介绍</td>
+									</tr>
+									<tr>
+										<td class="title" style="height: 20px">完美发型</td>
+									</tr>
+									<tr>
+										<td id="hairStyle" class="intro">内容介绍</td>
+									</tr>
+									<tr>
+										<td class="title">赠送服务</td>
+									</tr>
+									<tr>
+										<td id="extraService" class="intro">内容介绍</td>
+									</tr>
+								</table>
+							</div>
+							<div style="clear: both"></div>
+						</div>
+					</td>
+
+				</tr>
+				<tr>
+					<td>
+						<div class="toolbar" style="margin-left: -3px;">
+							<span>理发师</span><span
+								style="border: 1px solid blue; cursor: pointer"
+								onclick=GetBaberInfo_Male();
+								onMouseOver="this.style.backgroundColor='#ffffff'"
+								onMouseOut="this.style.backgroundColor='#e8f4ff'">默认</span><span
+								style="border: 1px solid blue; cursor: pointer"
+								onclick=GetBaberInfo_Male_ByPrice();
+								onMouseOver="this.style.backgroundColor='#ffffff'"
+								onMouseOut="this.style.backgroundColor='#e8f4ff'">价格</span>
+								<!-- <span
+								style="border: 1px solid blue; cursor: pointer" onclick=;
+								onMouseOver="this.style.backgroundColor='#ffffff'"
+								onMouseOut="this.style.backgroundColor='#e8f4ff'">销量</span>
+								-->
+						</div>
+					</td>
+
+				</tr>
+				<tr>
+					<td>
+						<div class="bottom">
+						
+						</div>
+					</td>
+
+				</tr>
+			</table>
+		</div>
+		<div class="footer">
+			<div>
+				<img src="images/footer2.png" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>

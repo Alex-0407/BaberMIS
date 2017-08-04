@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+.topbar {
+	height: 36px;
+	position: relative;
+	border-bottom: 1px solid #ddd;
+	background: rgb(240, 249, 253);
+}
+
+.topbar .leftrace {
+	min-width: 300px;
+	float: left;
+	height: 36px;
+	color: #333;
+	font-family: "宋体";
+	font-size: 14px;
+	height: 36px;
+	line-height: 36px;
+	padding-left: 18px;
+}
+
+.location {
+	font-weight: bold;
+	line-height: 36px;
+	padding-left: 10px;
+}
+
+.topbar .btnbar {
+	position: absolute;
+	right: 15px;
+	bottom: 12px;
+}
+
+.topbar .btnbar a:hover {
+	text-decoration: none;
+	color: #009ACD;
+}
+
+.queryArea {
+	color: #333;
+	min-height: 36px;
+	/* border-bottom: 1px solid #bbbbbb; */
+	line-height: 36px;
+	padding-left: 12px;
+}
+
+
+/*********分页按钮的样式 *******/
+.page{
+  	margin-top:5px;
+	margin-bottom:5px;
+	/*-moz-border-radius: 3px;
+  	-webkit-border-radius: 3px;
+  	border-radius: 3px;*/
+  	border-top:1px solid #ddd;
+  	padding:10px 5px 10px 5px;
+  	text-align: left;
+}
+.page span{
+
+	margin-right:3px;
+	cursor: pointer;
+}
+/*当前页的样式 */
+.page span a.currentPage{
+	background: #7CCD7C;
+}
+
+.page span a{
+	border:1px solid #ddd;
+	padding:5px;
+ 	background: #fff;
+ 	text-decoration: none;
+ 	color:#000;
+ }
+ 
+.page span a:hover{
+ 	border:1px solid #ddd;
+	padding:5px;
+ 	background: #eee;
+ 	color:#EE9A49;
+}
+
+/*顶上导航的样式*/
+.traceTitle{
+	color:#333; font-size:12px;
+}

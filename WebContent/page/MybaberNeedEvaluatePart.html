@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>待评价订单</title>
+<link href="css/mybarberpart.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/mybaberneed.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
+<script type="text/javascript" src="js/pay.js"></script>
+<script type="text/javascript" src="js/alert.js"></script>
+<script type="text/javascript" src="js/loadcss.js"></script>
+
+<link href="css/step.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/step.js"></script>
+
+<script type="text/javascript" src="js/getvalue.js"></script>
+<script type="text/javascript" src="js/evaluate.js"></script>
+
+<script>
+	var baseUrl = "http://localhost:8080/BaberMIS/";
+	$(function() {
+		GetOrderInfo_ByUserId();
+		//modefy();
+		
+	})
+
+	function showConent(url) {
+		var p = document.getElementById("right_content");
+		p.src = url;
+	}
+
+	$(function() {
+		setTimeout("changeDivStyle(3);", 100); // 0.1秒后展示结果，因为HTML加载顺序，先加载脚本+样式，再加载body内容。所以加个延时
+	});
+</script>
+</head>
+<body>
+	<div class="body" style="width: 800px;">
+		<div class="stepInfo">
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+			<div class="stepIco stepIco1" id="create">
+				1
+				<div class="stepText" id="createText">预约中</div>
+			</div>
+			<div class="stepIco stepIco2" id="check">
+				2
+				<div class="stepText" id="checkText">待支付</div>
+			</div>
+			<div class="stepIco stepIco3" id="produce">
+				3
+				<div class="stepText" id="produceText">待评价</div>
+			</div>
+			<div class="stepIco stepIco4" id="delivery">
+				4
+				<div class="stepText" id="deliveryText">评价中</div>
+			</div>
+			<div class="stepIco stepIco5" id="received">
+				5
+				<div class="stepText" id="receivedText">订单完成</div>
+			</div>
+			<div class="content">
+				<div class="title">
+					<span>待评价订单</span>
+				</div>
+				<div id="orderlist"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

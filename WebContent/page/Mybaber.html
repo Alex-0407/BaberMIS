@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>我的预约</title>
+    <link href="css/mybarber.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/mybaber.js"></script>
+    <script type="text/javascript" src="js/cookie.js"></script>
+    <script type="text/javascript" src="js/pay.js"></script>
+    <script type="text/javascript" src="js/alert.js"></script>
+    <script type="text/javascript" src="js/loadcss.js"></script>
+    <script type="text/javascript" src="js/modefy.js"></script>
+    <script type="text/javascript" src="js/order.js"></script>
+     
+    <script>
+    var baseUrl = "http://localhost:8080/BaberMIS/";
+    $(function(){
+    	GetOrderInfo_ByUserId();
+    	modefy();
+    	//alert($("#li_login").html());
+    })
+    
+    </script>
+</head>
+<body>
+    <div class="body" style="width: 1100px;">
+		<div class="header">
+			<div class="logo">
+				<span> <a style="cursor:pointer"  href="Home.html"> <img src="images/logo6.png" /></a></span>
+					<div style="margin-top: -50px; margin-left: 300px; color: #808080;">
+						<span>约理发师·我要有型</span>
+					</div>
+			</div>
+            
+          <div class="navigation">
+			<ul id="navigation">
+				<li> <a style="cursor:pointer"  href="Home.html"> <img src="images/Home.png"/> </a>
+				</li>
+				<li><a style="cursor:pointer" href="Male.html">型男</a>
+				</li>
+				<li><a style="cursor:pointer" href="Female.html">靓女</a>
+				</li>
+				<li id="li_login" onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a style="cursor:pointer" href="Login.html">登录</a>
+				 </li>
+					<li id="li_reg"><a style="cursor:pointer" href="Register.html">注册</a>
+					</li>
+			</ul>
+			</div>
+        </div>
+        <div class="content">
+            <div class="title"><span>我的预约</span></div>
+            <div id="nolist">
+            
+            </div>
+            
+            <div id="orderlist">
+            
+            </div>
+            <div id="orderpayedlist">
+            
+            </div>
+        <div class="footer"><img  src="images/footer2.png"/></div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>修改密码</title>
+    <script type="text/javascript" src="js/cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link href="css/modefypwdpart.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/alert.js"></script>
+    <script type="text/javascript" src="js/modefypwd.js"></script>
+    
+    <script type="text/javascript"
+	src="js/validation/js/jquery.validationEngine.js" charset="utf-8"></script>
+    <link href="js/validation/css/validationEngine.jquery.css"
+	type="text/css" rel="stylesheet" />
+    <script type="text/javascript"
+	src="js/validation/js/languages/jquery.validationEngine-zh_CN.js"
+	charset="utf-8"></script>
+    
+<script type="text/javascript">
+var baseUrl = "http://localhost:8080/BaberMIS/";
+$(document).ready(function() {
+	// binds form submission and fields to the validation engine
+	$("#modefypwdform").validationEngine({
+		ajaxFormValidation : true
+	//onAjaxFormComplete: ajaxValidationCallback,
+	//onBeforeAjaxFormValidation: beforeCall
+	/* success : true,
+	failure : function() {
+		document.getElementById('register').enabled = true;
+	} */
+	});
+	
+	modefypwd();
+});
+</script>
+
+</head>
+<body onLoad="javascript:document.getElementById('pwd').focus()">
+    <div class="body">
+        
+      <form id="modefypwdform" class="formular" method="post">
+			<fieldset>
+				<legend>修改密码 </legend>
+				<div id="regdiv" class="main">
+					<div id="pwddiv" class="namediv">
+						<label> <span>原密码: </span> <input id="pwd" value=""
+							class="validate[required,minSize[6],maxSize[8]]]" type="password"
+							placeholder="请输入原密码"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'"
+							 />
+						</label>
+					</div>
+
+					<div id="newpwddiv" class="newpwddiv">
+						<label> <span>设置新密码: </span> <input id="newpwd" name="newpwd"
+							value="" class="validate[required,minSize[6],maxSize[8]]"
+							type="password" placeholder="请输入6-8位新密码"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'"
+							/>
+						</label>
+					</div>
+
+					<div id="renewpwddiv" class="renewpwddiv">
+						<label> <span>确认新密码: </span> <input id="renewpwd" name="renewpwd"
+							value=""
+							class="validate[required,minSize[6],maxSize[8],equals[newpwd]]"
+							type="password" placeholder="请重新输入新密码"
+							onMouseOver="this.style.backgroundColor='#ffffff'"
+							onMouseOut="this.style.backgroundColor='#e8f4ff'"
+							/>
+						</label>
+						<!-- onblur="isenable()" -->
+					</div>
+
+					<input id="modefypwd" type="submit"
+						style="cursor: pointer" value="确认修改" />
+						<!-- <span class="cancel" onclick="cancel();">
+                    <button id="cancel" style="cursor:pointer">取消</button></span> -->  <br />
+				</div>
+
+			</fieldset>
+
+		</form>
+      
+    </div>
+
+</body>
+</html>

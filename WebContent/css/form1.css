@@ -1,0 +1,71 @@
+@CHARSET "UTF-8";
+
+.myform{
+	overflow: auto;
+}
+
+.formItem{
+	overflow: auto;
+	margin-bottom: 4px;
+	padding: 5px;
+	float: left;
+}
+
+.formItem_label{
+	float: left;
+	width: 100px;
+	text-align: right;
+	padding:7px 3px 0px 0px;
+}
+
+.helpInfo{
+	clear: left;
+	height: 20px;
+	line-height: 20px;
+}
+
+.formItem_wrapper{
+	float: left;
+}
+.formItem_field{
+	float: left;
+}
+.formItem_field input[type='text'],input[type='password'],input[type='email'],textarea{
+	padding:3px 2px;
+}
+
+.formItem_field textarea{
+	height: 70px;
+	overflow: auto;
+	resize:none;
+}
+
+
+.input1{
+	width: 150px;
+}
+
+.input2{
+	width:596px;
+}
+
+.form1{
+	width: 420px;
+}
+
+.form2{
+	width: 840px;
+}
+
+.textArea2{
+	width: 596px;
+}
+
+.textArea1{
+	width:245px;
+}
+
+.row{
+	clear: both;
+	float: none;
+}

@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+.w1 {
+	width: 100px;
+}
+
+.w3 {
+	width: 300px;
+}
+
+.w4 {
+	width: 400px;
+}
+
+.formLabel {
+	text-align: right;
+	color: #000;
+	vertical-align: top;
+}
+
+.formLabel span {
+	position: relative;
+	top: 6px;
+}
+
+.formField {
+	padding-left: 5px;
+}
+
+.formField .errorInfo {
+	position: relative;
+	top: -2px;
+	color: red;
+}
+
+.help {
+	color: #aaa;
+	height: 14px; 
+	vertical-align: top;
+}
+
+.fromGroup {
+	margin-bottom: 5px;
+}
+
+.baseform {
+	margin: 10px;
+}
+
+.needInput {
+	color: red;
+}
